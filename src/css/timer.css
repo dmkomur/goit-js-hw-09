@@ -1,0 +1,33 @@
+.timer {
+    display: inline-flex;
+    gap: 24px;
+    background-color: rgb(250, 87, 87);
+    border-radius: 6px;
+    padding: 10px
+}
+
+.label {
+    color: white;
+}
+
+.value {
+    color: white;
+    font-weight: 700;
+}
+
+.input {
+    border-style: none;
+    border-radius: 6px;
+
+    padding: 13px;
+    background-color: rgb(250, 87, 87);
+    color: white;
+}
+
+.btn {
+    border-color: rgb(250, 87, 87);
+    border-radius: 6px;
+    padding: 13px;
+    color: black;
+    font-weight: 700;
+}
