@@ -16,7 +16,7 @@ function onFormSubmit(event) {
   let totalDelay = delay;
 
     for (let i = 1; i <= Number(refs.amount.value); i += 1) {
-      if (i > 1) ( totalDelay = delay + Number(refs.step.value))
+      if (i > 1) ( totalDelay += Number(refs.step.value))
   createPromise(i, totalDelay).then(({ position, delay }) => {
     console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
   })
