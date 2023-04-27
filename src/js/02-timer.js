@@ -32,9 +32,9 @@ function onBtnStartClick() {
     const startInterval = setInterval(() => {
      const { days, hours, minutes, seconds } = convertMs(datePicker.selectedDates[0] - Date.now());
         spanDays.textContent = days;
-        spanHours.textContent = hours;
-        spanMinutes.textContent = minutes;
-        spanSeconds.textContent = seconds;
+        spanHours.textContent = addLeadingZero(hours);
+        spanMinutes.textContent = addLeadingZero(minutes);
+        spanSeconds.textContent = addLeadingZero(seconds);
     }, 1000);
 
     setTimeout(() => { clearInterval(startInterval) }, timeDiference)
@@ -60,17 +60,7 @@ function convertMs(ms) {
 }
 
 
-
-// function onBtnStartClick() {
-//     const timeDiference = datePicker.selectedDates[0] - Date.now();
-
-//     const startInterval = setInterval(() => {
-//      const { days, hours, minutes, seconds } = convertMs(datePicker.selectedDates[0] - Date.now());
-//         spanDays.textContent = days;
-//         spanHours.textContent = hours;
-//         spanMinutes.textContent = minutes;
-//         spanSeconds.textContent = seconds;
-//     }, 1000);
-
-//     setTimeout(() => { clearInterval(startInterval) }, timeDiference)
-// }
+function addLeadingZero(value) {
+    return String(value).padStart(2, '0');
+}
+    
