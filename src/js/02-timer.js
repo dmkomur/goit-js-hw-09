@@ -31,7 +31,7 @@ function onBtnStartClick() {
 
     const startInterval = setInterval(() => {
      const { days, hours, minutes, seconds } = convertMs(datePicker.selectedDates[0] - Date.now());
-        spanDays.textContent = days;
+        spanDays.textContent = addLeadingZero(days);
         spanHours.textContent = addLeadingZero(hours);
         spanMinutes.textContent = addLeadingZero(minutes);
         spanSeconds.textContent = addLeadingZero(seconds);
